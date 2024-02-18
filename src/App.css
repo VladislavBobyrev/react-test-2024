@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;list-style: none;
+  background: rgb(189, 216, 114);
+  height: calc(100vh - 200px  );
+}
+
+li {
+    font-size: 1vw;
+}
+footer {
+  background: rgb(23, 51, 177);
+  height: 100px;
+}

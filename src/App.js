@@ -1,25 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
+import { AppHeader } from './components/AppHeader';
+const person = [
+  {
+    name: "vladislav",
+    age: 8
+  },
+  {
+    name: "vladislav",
+    age: 8
+  },
+  {
+    name: "vladislav",
+    age: 8
+  }
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <AppHeader/>
+        <ul>
+        {person.map((user, index) =>
+          {
+            return (<li key={index}>
+              <strong>{user.name}</strong>
+              <p>{user.age}</p>
+            </li>)
+          })
+        }
+        </ul>
+        <footer>
+          footer
+        </footer>
     </div>
-  );
+
+
+  )
 }
 
 export default App;
